@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack - Your Fitness Companion</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>FitTrack - Track Your Fitness Journey</h1>
+    </header>
+    <!-- <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#activity">Activity</a></li>
+            <li><a href="#nutrition">Nutrition</a></li>
+            <li><a href="#sleep">Sleep</a></li>
+            <li><a href="#profile">Profile</a></li>
+        </ul>
+    </nav> -->
+    <div class="container">
+        <div id="dashboard" class="dashboard">
+            <div class="card">
+                <h2>Activity Overview</h2>
+                <canvas id="activityChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Nutrition Summary</h2>
+                <canvas id="nutritionChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Sleep Patterns</h2>
+                <canvas id="sleepChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Quick Log</h2>
+                <form id="quickLogForm">
+                    <select id="logType">
+                        <option value="activity">Activity</option>
+                        <option value="nutrition(Carbs)">Nutrition(Carbs)</option>
+                        <option value="nutrition(Protein)">Nutrition(Protein)</option>
+                        <option value="nutrition(Fat)">Nutrition(Fat)</option>
+                        <option value="sleep">Sleep</option>
+                    </select>
+                    <input type="text" id="logValue" placeholder="Enter value">
+                    <button type="submit">Log</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 FitTrack. All rights reserved.</p><br>
+            <ul class="footer-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#activity">Activity</a></li>
+                <li><a href="#nutrition">Nutrition</a></li>
+                <li><a href="#sleep">Sleep</a></li>
+                <li><a href="#profile">Profile</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

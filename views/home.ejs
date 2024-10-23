@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack - Your Ultimate Fitness Companion</title>
+    <link rel="stylesheet" href="css/landing-page.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">FitTrack</div>
+            <ul class="nav-links">
+                <li><a class="navbar-headings" href="#features">Features</a></li>
+                <li><a class="navbar-headings" href="#testimonials">Testimonials</a></li>
+                <li><a href="#" class="cta-button">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Track Your Fitness Journey with FitTrack</h1>
+                <p>The all-in-one fitness companion that helps you achieve your health goals.</p>
+                <a href="/dashboard" id="get-started" class="cta-button">Get Started</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Why Choose FitTrack?</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-running"></i>
+                        <h3>Activity Tracking</h3>
+                        <p>Log and monitor your workouts with ease.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Nutrition Tracking</h3>
+                        <p>Keep track of your meals and caloric intake.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Progress Monitoring</h3>
+                        <p>Visualize your fitness journey with detailed reports.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-medal"></i>
+                        <h3>Gamification</h3>
+                        <p>Earn badges and rewards for achieving milestones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Users Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah M.">
+                        <h3>Sarah M.</h3>
+                        <p>"FitTrack has completely transformed my fitness routine. I've never felt more motivated!"</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John D.">
+                        <h3>John D.</h3>
+                        <p>"The nutrition tracking feature has helped me make better food choices. I've lost 20 pounds!"</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="https://randomuser.me/api/portraits/women/89.jpg" alt="Emily R.">
+                        <h3>Emily R.</h3>
+                        <p>"I love the gamification aspect. Earning badges keeps me motivated to stick to my goals."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 FitTrack. All rights reserved.</p><br>
+            <ul class="footer-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#activity">Activity</a></li>
+                <li><a href="#nutrition">Nutrition</a></li>
+                <li><a href="#sleep">Sleep</a></li>
+                <li><a href="#profile">Profile</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple form validation for the newsletter signup
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                if (email) {
+                    alert('Thank you for signing up! We\'ll keep you updated on the latest FitTrack news.');
+                    this.reset();
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
