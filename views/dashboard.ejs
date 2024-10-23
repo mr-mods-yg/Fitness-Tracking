@@ -19,7 +19,18 @@
             <li><a href="#profile">Profile</a></li>
         </ul>
     </nav> -->
+    
     <div class="container">
+        <div class="card goals-card">
+            <h2>Set Your Goals</h2>
+            <form id="goalForm">
+                <input type="text" id="goalDescription" placeholder="Enter your goal">
+                <button type="submit">Set Goal</button>
+            </form>
+            <ul id="goalsList">
+                <!-- Goals will be dynamically listed here -->
+            </ul>
+        </div>
         <div id="dashboard" class="dashboard">
             <div class="card">
                 <h2>Activity Overview</h2>
@@ -47,8 +58,41 @@
                     <button type="submit">Log</button>
                 </form>
             </div>
+            <div class="card">
+                <h2>Nutrition Log</h2>
+                <form id="nutritionForm">
+                    <input type="text" id="foodItem" placeholder="Food Item">
+                    <input type="number" id="calories" placeholder="Calories">
+                    <button type="submit">Log Meal</button>
+                </form>
+                <ul id="nutritionList">
+                    <!-- Nutritional entries will be listed here -->
+                </ul>
+                <p>Total Calories: <span id="totalCalories">0</span></p>
+            </div>
+            <div class="card workout-card">
+                <h2>Create Workout Routine</h2>
+                <form id="workoutForm">
+                    <input type="text" id="exerciseName" placeholder="Exercise Name" required>
+                    <input type="number" id="duration" placeholder="Duration (minutes)" required>
+                    <input type="number" id="reps" placeholder="Repetitions" required>
+                    <button type="submit">Add Exercise</button>
+                </form>
+                <ul id="workoutList">
+                    <!-- Workout routines will be dynamically listed here -->
+                </ul>
+            </div>
+            
+
         </div>
     </div>
+    
+    
+    
+    
+    
+    
+    
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 FitTrack. All rights reserved.</p><br>

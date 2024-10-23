@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-
+const PORT = 3000;
 app.use(express.static("public"));
 app.use(logger)
 
-console.log("Starting server");
+console.log("Starting Server");
 
 app.set('view engine','ejs');
 
@@ -22,4 +22,6 @@ function logger(req, res, next){
     console.log('[' + current_date + " " + current_time + '] ' + req.hostname + ' ' + req.method +  ' ' + req.protocol + ' ' + req.originalUrl + ' '+ res.statusCode);
     next()
 }
-app.listen(3000);
+app.listen(PORT, (err)=>{
+    console.log(`Server listening on Port : ${PORT}`)
+});

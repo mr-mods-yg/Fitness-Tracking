@@ -102,3 +102,59 @@ document.getElementById('quickLogForm').addEventListener('submit', function(e) {
     // Clear the input
     document.getElementById('logValue').value = '';
 });
+
+document.getElementById('goalForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const goalDescription = document.getElementById('goalDescription').value;
+    
+    if(goalDescription!=""){
+    // Add the goal to the list
+    const goalsList = document.getElementById('goalsList');
+    const newGoal = `<li>${goalDescription}</li>`;
+    goalsList.insertAdjacentHTML('beforeend', newGoal);
+    }
+    // Clear the input field
+    document.getElementById('goalDescription').value = '';
+});
+
+let totalCalories = 0;
+
+document.getElementById('nutritionForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const foodItem = document.getElementById('foodItem').value;
+    const calories = parseInt(document.getElementById('calories').value);
+
+    // Update total calories
+    totalCalories += calories;
+    document.getElementById('totalCalories').textContent = totalCalories;
+
+    // Add the food item to the list
+    const nutritionList = document.getElementById('nutritionList');
+    const newEntry = `<li>${foodItem}: ${calories} calories</li>`;
+    nutritionList.insertAdjacentHTML('beforeend', newEntry);
+
+    // Clear input fields
+    document.getElementById('foodItem').value = '';
+    document.getElementById('calories').value = '';
+});
+
+
+document.getElementById('workoutForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const exerciseName = document.getElementById('exerciseName').value;
+    const duration = document.getElementById('duration').value;
+    const reps = document.getElementById('reps').value;
+
+    const workoutList = document.getElementById('workoutList');
+
+    const listItem = document.createElement('li');
+    listItem.textContent = `${exerciseName} - ${duration} minutes, ${reps} reps`;
+    workoutList.appendChild(listItem);
+
+    // Clear the form
+    this.reset();
+});
+
